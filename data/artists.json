@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "nome": "Anitta",
+    "genero": "Pop",
+    "pais": "Brasil"
+  },
+  {
+    "id": "2",
+    "nome": "Caetano Veloso",
+    "genero": "MPB",
+    "pais": "Brasil"
+  },
+  {
+    "id": "3",
+    "nome": "Gilberto Gil",
+    "genero": "Tropicalia",
+    "pais": "Brasil"
+  },
+  {
+    "id": "4",
+    "nome": "Marisa Monte",
+    "genero": "MPB",
+    "pais": "Brasil"
+  },
+  {
+    "id": "5",
+    "nome": "Djavan",
+    "genero": "MPB",
+    "pais": "Brasil"
+  },
+  {
+    "id": "6",
+    "nome": "Billie Eilish",
+    "genero": "Alt Pop",
+    "pais": "EUA"
+  },
+  {
+    "id": "7",
+    "nome": "Kendrick Lamar",
+    "genero": "Hip Hop",
+    "pais": "EUA"
+  },
+  {
+    "id": "8",
+    "nome": "Rosalia",
+    "genero": "Flamenco Pop",
+    "pais": "Espanha"
+  },
+  {
+    "id": "9",
+    "nome": "Burna Boy",
+    "genero": "Afrobeats",
+    "pais": "Nigéria"
+  },
+  {
+    "id": "10",
+    "nome": "BTS",
+    "genero": "K-Pop",
+    "pais": "Coreia do Sul"
+  },
+  {
+    "id": "11",
+    "nome": "Rita Lee",
+    "genero": "Rock",
+    "pais": "Brasil"
+  },
+  {
+    "id": "12",
+    "nome": "Milton Nascimento",
+    "genero": "MPB",
+    "pais": "Brasil"
+  }
+]

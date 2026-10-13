@@ -1,0 +1,17 @@
+:root {
+  color-scheme: dark;
+  --sans: Inter, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: #070a14;
+  color: #e8ecf8;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
