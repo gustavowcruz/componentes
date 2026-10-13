@@ -2,6 +2,15 @@
   color-scheme: dark;
   --sans: Inter, system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --bg: #0a0a0b;
+  --panel: #111113;
+  --panel-2: #161618;
+  --border: #232326;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --faint: #63636b;
+  --accent: #fafafa;
 }
 
 * { box-sizing: border-box; }
@@ -9,9 +18,14 @@
 body {
   margin: 0;
   font-family: var(--sans);
-  background: #070a14;
-  color: #e8ecf8;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root { min-height: 100vh; }
+
+code, kbd {
+  font-family: var(--mono);
+}

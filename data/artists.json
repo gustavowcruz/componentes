@@ -70,5 +70,11 @@
     "nome": "Milton Nascimento",
     "genero": "MPB",
     "pais": "Brasil"
+  },
+  {
+    "id": "4c189663-ad4a-442d-bf38-e7fd23464b1f",
+    "nome": "Faye Wong",
+    "genero": "Cpop",
+    "pais": "China"
   }
 ]

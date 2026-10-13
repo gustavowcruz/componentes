@@ -1,14 +1,12 @@
 .upsert {
-  --bg0: #0b0e17;
-  --bg1: #12172a;
-  --bg2: #1a2138;
-  --line: #2a3352;
-  --txt: #e8ecf8;
-  --mut: #9aa3c0;
-  --acc: #8b5cf6;
-  --acc2: #22d3ee;
-  --ok: #34d399;
-  --err: #fb7185;
+  --bg1: #111113;
+  --bg2: #161618;
+  --line: #232326;
+  --txt: #fafafa;
+  --mut: #a1a1aa;
+  --ok: #d4d4d8;
+  --err: #f87171;
+  --warn: #fbbf24;
   position: relative;
   width: 100%;
   color: var(--txt);
@@ -18,23 +16,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, var(--bg2), var(--bg1));
+  background: var(--bg2);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 4px 6px 4px 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 2px 4px 2px 12px;
 }
 
-.upsert-field:focus-within {
-  border-color: var(--acc);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25), 0 10px 30px rgba(0, 0, 0, 0.35);
-}
+.upsert-field:focus-within { border-color: var(--mut); }
 
-.upsert-icon {
-  color: var(--mut);
-  font-size: 20px;
-  margin-right: 8px;
-}
+.upsert-icon { color: var(--mut); font-size: 16px; margin-right: 8px; }
 
 .upsert-input {
   flex: 1;
@@ -42,50 +32,49 @@
   border: none;
   outline: none;
   color: var(--txt);
-  font-size: 16px;
-  padding: 12px 6px;
+  font-size: 14px;
+  padding: 11px 6px;
   min-width: 0;
 }
 
-.upsert-input::placeholder { color: #66708f; }
+.upsert-input::placeholder { color: #63636b; }
 
 .upsert-spinner {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  border: 2px solid rgba(139, 92, 246, 0.25);
-  border-top-color: var(--acc);
+  border: 2px solid #3f3f46;
+  border-top-color: var(--txt);
   animation: spin 0.7s linear infinite;
   margin-right: 8px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .upsert-clear {
-  background: #242c4b;
+  background: transparent;
   color: var(--mut);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  width: 30px;
-  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   margin-right: 4px;
+  font-size: 12px;
 }
-.upsert-clear:hover { color: var(--txt); border-color: var(--acc); }
+.upsert-clear:hover { color: var(--txt); background: var(--bg1); border-color: var(--line); }
 
 .upsert-dropdown {
-  margin-top: 10px;
-  background: rgba(18, 23, 42, 0.98);
+  margin-top: 8px;
+  background: var(--bg1);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
 }
 
 .upsert-list {
   list-style: none;
   margin: 0;
-  padding: 8px;
+  padding: 6px;
   max-height: 300px;
   overflow: auto;
 }
@@ -98,72 +87,65 @@
   text-align: left;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 9px 10px;
   color: var(--txt);
   cursor: pointer;
+  font-size: 14px;
 }
 
-.upsert-option.active, .upsert-option:hover {
-  background: #1d2545;
-  border-color: #33406b;
-}
+.upsert-option.active, .upsert-option:hover { background: var(--bg2); }
 
-.upsert-option.selected {
-  border-color: var(--acc);
-  background: rgba(139, 92, 246, 0.12);
-}
+.upsert-option.selected { border-color: var(--mut); background: var(--bg2); }
 
 .upsert-avatar {
   flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
   display: grid;
   place-items: center;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--acc), var(--acc2));
-  color: #0b0e17;
+  font-weight: 600;
+  font-size: 14px;
+  background: #27272a;
+  border: 1px solid var(--line);
+  color: var(--txt);
 }
 
 .upsert-avatar.plus {
   background: transparent;
-  border: 1.5px dashed var(--acc);
-  color: var(--acc);
-  font-size: 20px;
+  border: 1px dashed #52525b;
+  color: var(--mut);
+  font-size: 16px;
 }
 
 .upsert-meta { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.upsert-meta strong { font-size: 15px; }
-.upsert-meta small { color: var(--mut); font-size: 12.5px; }
+.upsert-meta strong { font-size: 14px; font-weight: 500; }
+.upsert-meta small { color: var(--mut); font-size: 12px; }
 .upsert-meta mark {
-  background: rgba(34, 211, 238, 0.25);
-  color: #a5f3fc;
-  border-radius: 4px;
+  background: #3f3f46;
+  color: var(--txt);
+  border-radius: 3px;
   padding: 0 2px;
 }
 
 .upsert-badge {
   font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ok);
-  background: rgba(52, 211, 153, 0.12);
-  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: var(--mut);
+  background: var(--bg2);
+  border: 1px solid var(--line);
   padding: 3px 8px;
   border-radius: 999px;
 }
 
 .upsert-option.create {
-  border: 1px dashed rgba(139, 92, 246, 0.5);
-  background: rgba(139, 92, 246, 0.08);
+  border: 1px dashed #3f3f46;
   margin-top: 4px;
 }
 
 .upsert-create-form {
   border-top: 1px solid var(--line);
   padding: 12px;
-  background: #0f1430;
 }
 
 .upsert-row {
@@ -176,52 +158,56 @@
 
 .upsert-row label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--mut); }
 .upsert-row input {
-  background: #0b1026;
+  background: var(--bg2);
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 8px;
   color: var(--txt);
-  padding: 10px 12px;
+  padding: 9px 12px;
   outline: none;
+  font-size: 13px;
 }
-.upsert-row input:focus { border-color: var(--acc); }
+.upsert-row input:focus { border-color: var(--mut); }
+.upsert-row input::placeholder { color: #63636b; }
 
 .upsert-submit {
   width: 100%;
-  border: none;
-  border-radius: 12px;
-  padding: 12px;
-  font-weight: 700;
+  border: 1px solid var(--txt);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 13.5px;
   cursor: pointer;
-  color: #0b0e17;
-  background: linear-gradient(90deg, var(--acc), var(--acc2));
+  color: #0a0a0b;
+  background: var(--txt);
 }
-.upsert-submit:disabled { opacity: 0.6; cursor: wait; }
+.upsert-submit:hover:not(:disabled) { background: #e4e4e7; }
+.upsert-submit:disabled { opacity: 0.5; cursor: wait; }
 
 .upsert-empty, .upsert-error {
   padding: 14px;
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--mut);
 }
 .upsert-error { color: var(--err); }
 
 .upsert-offline {
   margin: 8px;
-  padding: 10px 14px;
-  font-size: 13px;
+  padding: 10px 12px;
+  font-size: 12.5px;
   line-height: 1.5;
-  color: #fcd34d;
-  background: rgba(251, 191, 36, 0.08);
-  border: 1px solid rgba(251, 191, 36, 0.35);
-  border-radius: 12px;
+  color: var(--warn);
+  background: rgba(251, 191, 36, 0.06);
+  border: 1px solid #44403c;
+  border-radius: 8px;
 }
 .upsert-offline code {
   font-family: ui-monospace, Consolas, monospace;
-  background: #0b1026;
-  border: 1px solid rgba(251, 191, 36, 0.3);
-  border-radius: 6px;
-  padding: 1px 7px;
-  font-size: 12px;
-  color: #fde68a;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-size: 11.5px;
+  color: var(--warn);
 }
 
 .upsert-selected {
@@ -230,31 +216,30 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: rgba(52, 211, 153, 0.08);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  border-radius: 14px;
-  padding: 12px 14px;
+  background: var(--bg1);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px 14px;
 }
 .upsert-selected div { display: flex; flex-direction: column; gap: 2px; }
-.upsert-selected small { color: var(--mut); text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; }
-.upsert-selected strong { font-size: 17px; }
-.upsert-selected span { color: var(--mut); font-size: 13px; }
+.upsert-selected small { color: var(--mut); text-transform: uppercase; font-size: 10.5px; letter-spacing: 0.08em; }
+.upsert-selected strong { font-size: 15px; font-weight: 600; }
+.upsert-selected span { color: var(--mut); font-size: 12.5px; }
 .upsert-selected code {
-  background: #0b1026;
-  border: 1px solid rgba(52, 211, 153, 0.3);
+  background: var(--bg2);
+  border: 1px solid var(--line);
   color: var(--ok);
-  border-radius: 8px;
-  padding: 4px 10px;
-  font-size: 12px;
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 11.5px;
 }
 
 .upsert-toast {
   margin-top: 12px;
-  background: #0f1430;
+  background: var(--bg1);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--acc2);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 10px 14px;
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--txt);
 }
